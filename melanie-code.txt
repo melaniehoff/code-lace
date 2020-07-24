@@ -1,0 +1,143 @@
+var buddylist;
+var listX = 1090;
+var listY = 30;
+var listWidth = 300;
+var listHeight = 70;
+var isOverList = false;
+var xOffset = 0;
+var yOffset = 0;
+var locked = false;
+var vidX = 300;
+var vidY = 100;
+var count = 0;
+
+
+
+function preload() {
+  desktop = loadImage('assets/desktop-3.jpg');
+  banner = loadImage('assets/banner.jpg');
+  buddylist = loadImage('assets/buddylist-8.jpg');
+  
+
+}
+
+
+
+function setup() {
+  createCanvas(1300, 810);
+  background(desktop);
+  
+     // * VIDEOS 
+
+  mycomp = createVideo(['assets/mycomputer.mp4']);
+  mycomp.position(vidX, vidY);
+  mycomp.stop();
+  mycomp.hide();
+
+  docs = createVideo(['assets/mydocuments-camsmiles.mp4']);
+  docs.position(vidX, vidY);
+  docs.stop();
+  docs.hide();
+  
+  recycle = createVideo(['assets/recyclebin-girl.mp4']);
+  recycle.position(vidX, vidY);
+  recycle.stop();
+  recycle.hide();
+  
+  uncle = createVideo(['assets/UncleJoe.mp4']);
+  uncle.position(vidX, vidY);
+  uncle.stop();
+  uncle.hide();
+  
+  adam = createVideo(['assets/adamsux777.mp4']);
+  adam.position(vidX, vidY);
+  adam.stop();
+  adam.hide();
+  
+  luvz = createVideo(['assets/4LuvzSake.mp4']);
+  luvz.position(vidX, vidY);
+  luvz.stop();
+  luvz.hide();
+  
+  ericschank = createVideo(['assets/EricSchenkel.mp4']);
+  ericschank.position(vidX, vidY);
+  ericschank.stop();
+  ericschank.hide();
+
+  beans = createVideo(['assets/I_ate_beans.mp4']);
+  beans.position(vidX, vidY);
+  beans.stop();
+  beans.hide();
+  
+  lauren = createVideo(['assets/LaurenBrown69.mp4']);
+  lauren.position(vidX, vidY);
+  lauren.stop();
+  lauren.hide();
+  
+  tryto = createVideo(['assets/TryToTouchThis.mp4']);
+  tryto.position(vidX, vidY);
+  tryto.stop();
+  tryto.hide();
+  
+  mjdesign = createVideo(['assets/MJdesign.mp4']);
+  mjdesign.position(vidX, vidY);
+  mjdesign.stop();
+  mjdesign.hide();
+  
+  footjob = createVideo(['assets/footjob.mp4']);
+  footjob.position(vidX, vidY);
+  footjob.stop();
+  
+  
+  jmoneyrealnugger = createVideo(['assets/JMoneyRealNugger.mp4']);
+  jmoneyrealnugger.position(vidX, vidY);
+  jmoneyrealnugger.stop();
+  jmoneyrealnugger.hide();
+  
+  thebigfizzy = createVideo(['assets/TheBigFizzy.mp4']);
+  thebigfizzy.position(vidX, vidY);
+  thebigfizzy.stop();
+  thebigfizzy.hide();
+
+  shitbrick = createVideo(['assets/shitbrick34.mp4']);
+  shitbrick.position(vidX, vidY);
+  shitbrick.stop();
+  shitbrick.hide();
+  
+  uglyduckling = createVideo(['assets/uglyduckling5782.mp4']);
+  uglyduckling.position(vidX, vidY);
+  uglyduckling.stop();
+  uglyduckling.hide();
+  
+  phadedprophecy = createVideo(['assets/PhadedProphecy.mp4']);
+  phadedprophecy.position(vidX, vidY);
+  phadedprophecy.stop();
+  phadedprophecy.hide();
+  
+  
+  bingbong = createVideo(['assets/SnakeVenom007.mp4']);
+  bingbong.position(vidX, vidY);
+  bingbong.stop();
+  bingbong.hide();
+  
+  ////////////////////////////////////////////////////////////////////////////////
+  xOut = createDiv('');
+  xOut.position(884, 107);
+  xOut.size(70, 70);
+  xOut.mousePressed(function() {
+    clearVideos();
+  });
+
+  
+  compDiv = createDiv('');
+  compDiv.size(100, 89);
+  compDiv.mousePressed(function() {
+    clearVideos();
+    mycomp.show();
+    mycomp.loop();
+    
+  });
+  
+  
+  
+ 
